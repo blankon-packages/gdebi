@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with python2
+
+clean:
+	dh $@
+	rm -rf build GDebi/Version.py po/mo
+
+override_dh_auto_install:
+	dh_auto_install -- --install-scripts=/usr/share/gdebi \
+		--install-lib=/usr/share/gdebi
+
+override_dh_python2:
+	dh_python2 /usr/share/gdebi
