@@ -1,9 +1,99 @@
-gdebi (0.8.2blankon1) rote; urgency=low
+gdebi (0.8.7blankon1) rote-updates; urgency=low
 
-  * Import to rote - change debian/control
-  * Remove locale debian/gdebi-core.install
+  * change debian/control
+  * add patches to fix id.po
 
- -- Mas Supriyadi <pri_yess@yahoo.com>  Mon, 24 Oct 2011 05:38:50 +0700
+ -- priyess <priyess@priyess-M7x0S>  Tue, 27 Nov 2012 21:48:05 +0700
+
+gdebi (0.8.7) unstable; urgency=low
+
+  [ Michael Vogt ]
+  * GDebi/GDebi.py:
+    - do not set a busy cursor if there is no X11 window (LP: #1055181).
+
+  [ Jason Conti ]
+  * GDebi/GDebiCommon.py:
+    - Define apt.Cache in class initialization (LP: #1072799).
+
+  [ Luca Falavigna ]
+  * gdebi-kde:
+    - Do not use unicode in help options (Closes: #691998, LP: #1063114).
+  * GDebi/GDebiCli.py:
+    - Improve exception handling.
+  * debian/control:
+    - Add file to gdebi-core dependencies (LP: #1067306).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Fri, 02 Nov 2012 17:36:06 +0100
+
+gdebi (0.8.6) unstable; urgency=low
+
+  * gdebi, GDebi/GDebiCli.py:
+    - Return dpkg error code (LP: #1033631).
+  * gdebi-gtk, gdebi-kde:
+    - Convert help options with unicode (LP: #976253).
+  * GDebi/GDebi.py:
+    - Port to new GIO API (LP: #858700).
+  * GDebi/GDebi.py, data/gdebi.ui:
+    - Mark menu and labels as sensitive at startup (LP: #1000014).
+  * GDebi/GDebiCli.py, GDebi/GDebiCommon.py:
+    - Also handle ValueError exception (LP: #980457).
+  * GDebi/GDebiKDE.py:
+    - Fall-back on kdesu if kdesudo is not available (LP: #949869).
+  * debian/control:
+    - Add xz-utils to gdebi-core Suggests field (Closes: #685193).
+  * po/pt.po:
+    - Fix translation string which erroneously used three format string
+      parameters instead of two (LP: #964895).
+  * po/*.po:
+    - Refresh translations exported from Rosetta.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Thu, 11 Oct 2012 21:56:26 +0200
+
+gdebi (0.8.5) unstable; urgency=low
+
+  * GDebi/GDebi.py:
+    - Check whether model and path are set (LP: #917802, #912389).
+  * debian/control:
+    - gdebi must depend on python-gi (Closes: #661624).
+    - Bump Standards-Version to 3.9.3.
+  * debian/copyright:
+    - Format now points to copyright-format site.
+  * po/*.po:
+    - Refresh translations exported from Rosetta.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Wed, 29 Feb 2012 22:36:18 +0100
+
+gdebi (0.8.4) unstable; urgency=low
+
+  * GDebi/GDebiKDE.py:
+    - Fix execl invocation (Closes: #654456).
+  * debian/control:
+    - Add kdebase-runtime as optional dependency for gdebi-kde.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Wed, 25 Jan 2012 23:37:55 +0100
+
+gdebi (0.8.3) unstable; urgency=low
+
+  [ Luca Falavigna ]
+  * data/gdebi.desktop.in:
+    - Append %f to Exec parameter (LP: #803729).
+  * GDebi/GDebiKDE.py:
+    - Invoke kdesu instead of kdesudo in Debian (Closes: #641078).
+  * debian/control:
+    - Suggest xz-lzma to provide support for lzma compresed packages,
+      they are not very common as lzma is no longer supported by
+      Debian archive (superseded by xz), but are still valid and
+      supported by dpkg/apt (Closes: #650507).
+    - Add kde-runtime to gdebi-kde dependencies for kdesu support.
+  * po/*.po:
+    - Refresh translations exported from Rosetta.
+
+  [ Michael Terry ]
+  * debian/control:
+    - Do not pass "all" to X-Python-Version, pass ">= 2.6" instead,
+      which is known to work with GDebi code (Closes: #648229).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 03 Dec 2011 13:05:55 +0100
 
 gdebi (0.8.2) unstable; urgency=low
 
