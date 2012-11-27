@@ -1,6 +1,6 @@
 gdebi (0.8.7blankon1) rote-updates; urgency=low
 
-  * change debian/control
+  * change debian/control and debian/source/format
   * add patches to fix id.po
 
  -- priyess <priyess@priyess-M7x0S>  Tue, 27 Nov 2012 21:48:05 +0700
