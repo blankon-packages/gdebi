@@ -1,3 +1,9 @@
+gdebi (0.8.7blankon3) rsuroboyo; urgency=low
+
+  * import from rote
+
+ -- priyess <priyess@priyess-M7x0S>  Wed, 28 Nov 2012 05:46:52 +0700
+
 gdebi (0.8.7blankon2) rote-updates; urgency=low
 
   * change debian/source/format
