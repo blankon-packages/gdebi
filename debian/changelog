@@ -1,3 +1,9 @@
+gdebi (0.8.7blankon2) rote-updates; urgency=low
+
+  * change debian/source/format
+
+ -- priyess <priyess@priyess-M7x0S>  Tue, 27 Nov 2012 22:43:55 +0700
+
 gdebi (0.8.7blankon1) rote-updates; urgency=low
 
   * change debian/control and debian/source/format
