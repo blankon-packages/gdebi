@@ -1,3 +1,25 @@
+gdebi (0.9.4blankon1) tambora; urgency=low
+
+  * New upstream release.
+
+ -- Aris Febrianto <ariesfebrianto@gmail.com>  Mon, 24 Mar 2014 22:34:52 +0700
+
+gdebi (0.9.4) unstable; urgency=medium
+
+  [ Michael Vogt ]
+  * Add basic support to view click packages.
+  * fix test failure, use "python setup.py test" to run the tests
+  * po/*.po:
+    - updated translations from launchpad
+
+  [ Dimitri John Ledkov ]
+  * Auto-allocate Xserver to run tests under xvfb-run.
+  * Add top-level executable scripts to pyflakes test.
+  * Check using both pyflakes and pyflakes3.
+  * Add lintian build-dependency.
+
+ -- Michael Vogt <mvo@debian.org>  Tue, 18 Mar 2014 20:59:24 +0100
+
 gdebi (0.9.1blankon1) suroboyo; urgency=low
 
   * New Upstream.
