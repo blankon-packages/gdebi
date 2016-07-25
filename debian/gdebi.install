@@ -3,5 +3,5 @@ usr/share/gdebi/gdebi.ui
 usr/share/gdebi/gdebi.png
 usr/share/gdebi/GDebi/SimpleGtkbuilderApp.py
 usr/share/gdebi/GDebi/GDebiGtk.py
-usr/share/applications/*.desktop
+#usr/share/applications/*.desktop
 usr/share/application-registry

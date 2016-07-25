@@ -1,3 +1,111 @@
+gdebi (0.9.5.7blankon1) tambora; urgency=medium
+
+  * Drop *.desktop 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 26 Jul 2016 06:12:04 +0700
+
+gdebi (0.9.5.7) unstable; urgency=medium
+
+  [ Michael Vogt ]
+  * GDebi/GDebiGtk.py:
+    - fix child_exited() change for vte 2.91 (LP: #1472618)
+
+  [ Dimitri John Ledkov ]
+  * Fix exceptions going out of scope. (LP: #1304274)
+
+ -- Michael Vogt <mvo@debian.org>  Wed, 08 Jul 2015 15:24:36 +0200
+
+gdebi (0.9.5.6) unstable; urgency=medium
+
+  [ Iain Lane ]
+  * Use vte 2.91
+
+  [ Alex Henrie ]
+  * Use standard MIME type vnd.debian.binary-package so that xdg-open
+    foo.deb will use gdebi
+
+ -- Michael Vogt <mvo@debian.org>  Thu, 02 Jul 2015 09:18:36 +0200
+
+gdebi (0.9.5.5+nmu1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Make sure the watcher for the lintian exit code is added only once. It was
+    added twice by mistake (with both IO watchers), causing a race condition
+    when checking the exit code. This fixes the lintian test during the build.
+    (Closes: #765151).
+
+ -- Ivo De Decker <ivodd@debian.org>  Tue, 11 Nov 2014 17:53:51 +0100
+
+gdebi (0.9.5.5) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Michael Vogt ]
+  * mention ability to resolve build-dependencies from a debian/control
+    file, thanks to Axel Beckert
+  * improve description for gdebi-gtk to include information about
+    lintian and the ability to inspect deb packages
+
+  [ Luca Falavigna ]
+  * debian/control:
+    - Add lintian to gdebi's Recommends field (Closes: #755812).
+    - Bump Standards-Version to 3.9.6.
+  * tests/test_gdebi_cli.py:
+    - Fix FTBFS with non en_US locales (Closes: #757078).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Mon, 29 Sep 2014 09:07:38 +0200
+
+gdebi (0.9.5.4) unstable; urgency=low
+
+  [ Michael Vogt ]
+  * fix installing of dependency packages when called with sudo
+    (LP: #1309387)
+
+  [ Michael Werle ]
+  * gdebi-kde, GDebi/GDebiKDE.py:
+    - Fix python3 internatlization bugs (Closes: #743756) (LP: #1304143).
+
+  [ Luca Falavigna ]
+  * Fix tests at build time (Closes: #743091).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Tue, 22 Apr 2014 10:54:48 +0200
+
+gdebi (0.9.5.3) unstable; urgency=low
+
+  * convert only full lines from dpkg-statusfd into utf8 (LP: #1301857)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 07 Apr 2014 10:12:02 +0200
+
+gdebi (0.9.5.2) unstable; urgency=medium
+
+  * Add a universal_newlines=True to Popen command to get a proper unicode
+    object.  (LP: #1301422)
+  * Whitespace normalization.
+
+ -- Barry Warsaw <barry@ubuntu.com>  Fri, 04 Apr 2014 09:48:25 -0400
+
+gdebi (0.9.5.1) unstable; urgency=medium
+
+  * Lower required python3 version to 3.3. As 3.4 is not needed, and
+    Debian's default is still 3.3.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Wed, 02 Apr 2014 10:52:31 +0100
+
+gdebi (0.9.5) unstable; urgency=medium
+
+  [ Barry Warsaw ]
+  * New upstream release.
+  * Switched all command line scripts to Python 3 and dropped Dependencies
+    on Python 3.  (LP: #1283574)
+  * Some whitespace cleanup.
+  * Removed some unnecessary shebang lines.
+  * Set the dpkg child process write file descriptor to 'inheritable'.
+
+  [ Dimitri John Ledkov ]
+  * Process all packages with dh_python3, to get correct dependencies.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Wed, 02 Apr 2014 00:18:33 +0100
+
 gdebi (0.9.4blankon1) tambora; urgency=low
 
   * New upstream release.
